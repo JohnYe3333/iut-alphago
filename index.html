@@ -68,6 +68,14 @@
                     </div>
                 </section>
                 <section>
+                  <p>DeepMind published a paper in Nature on the 27th
+                    of January to
+                    introduce <strong>AlphaGo</strong>.</p>
+                  <p>AlphaGo is the first AI to ever beat
+                    a <strong>human Go pro</strong> without free
+                    moves.</p>
+                </section>
+                <section>
                     <section>
                         <h1>Overview</h1>
                         <ul style="list-style: none;">
@@ -107,8 +115,9 @@
                       <p>Despite its very simple rules, Go
                         is <strong>very</strong> hard to master:</p>
                       <ul>
-                        <li>Average number of possible moves: 200</li>
-                        <li>Average number moves in a game: 300</li>
+                        <li>Average number of possible moves at each
+                          turn: 200</li>
+                        <li>Average number of moves in a game: 300</li>
                         <li>Number of legal positions: estimated
                           number of atomes in the observable
                           universe <strong>squared</strong></li>
@@ -128,14 +137,14 @@
                     </section>
                     <section>
                       <h4>Previous Go AIs</h4>
-                      <h2>Objective of a game AI</h2>
-                      <p>Explore the game tree efficiently to find the
-                        best move.</p>
+                      <h2>Prerequisite: Game Tree</h2>
+                      <img src="img/game-tree.png" height="400">
                     </section>
                     <section>
                       <h4>Previous Go AIs</h4>
-                      <h2>Game Tree</h2>
-                      <img src="img/game-tree.png" height="400">
+                      <h2>Objective of a game AI</h2>
+                      <p>Explore the game tree efficiently to find the
+                        best move.</p>
                     </section>
                     <section>
                       <h4>Previous Go AIs</h4>
@@ -232,16 +241,71 @@
                     <section>
                       <h4>AlphaGo</h4>
                       <h2>Core of the approach</h2>
+                      <p>Augment Monte Carlo Tree Search with two
+                      Convolutional Neural Networks.</p>
                       <img src="img/networks.jpg" height="400">
                     </section>
                     <section>
                       <h4>AlphaGo</h4>
-                      <h2>Data</h2>
+                      <h2>Policy Network</h2>
+                      <p>Predict the next move given the position.</p>
+                      <img src="img/policy-network.png" height="400">
+                    </section>
+                    <section>
+                      <h4>AlphaGo</h4>
+                      <h2>Value Network</h2>
+                      <p>Predict the winner given the position.</p>
+                      <img src="img/value-network.png" height="400">
+                    </section>
+                    <section>
+                      <h4>AlphaGo</h4>
+                      <h2>Integration in MCTS</h2>
+                      <img src="img/mcts-example.png" height="500">
+                    </section>
+                    <section>
+                      <h4>AlphaGo</h4>
+                      <h2>Supervised Learning</h2>
                       <ul>
                         <li>29M positions from 160k KGS games</li>
                         <li>8M positions from Tygem games</li>
-                        <li>35M positions from 35M self-simulated games</li>
                       </ul>
+                    </section>
+                    <section>
+                      <h4>AlphaGo</h4>
+                      <h2>Reinforcement Learning</h2>
+                      <ul>
+                        <li>Make the policy network play against its
+                          previous versions to create new data to
+                          learn from</li>
+                        <li>Use the new policy network to create 30M
+                          positions to learn the value network</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h4>AlphaGo</h4>
+                      <h2>Hardware</h2>
+                      <p>Google scale:</p>
+                      <ul>
+                        <li>1202 CPUs</li>
+                        <li>176 GPUs</li>
+                        <li>40 search threads</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h4>AlphaGo</h4>
+                      <h2>Performance</h2>
+                      <p>Beat Fan Hui, the European Go Champion
+                        5-0.</p>
+                      <img src="img/rankings.png" height="400">
+                    </section>
+                    <section>
+                      <h4>AlphaGo</h4>
+                      <h2>Final Boss</h2>
+                      <p>Google challenged Lee Sedol, the best player
+                        of the last 10 years. Starting in <strong>6
+                          days!</strong></p>
+                      <img src="img/sedol.jpg" height="400">
+                      <p><strong>1,000,000$ prize!</strong></p>
                     </section>
                 </section>
                 <section>
